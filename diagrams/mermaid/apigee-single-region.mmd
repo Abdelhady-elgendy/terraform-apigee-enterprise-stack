@@ -1,0 +1,8 @@
+flowchart LR
+  User((Client)) -->|HTTPS| Edge[Public DNS / Cert]
+  Edge -->|Private / Controlled| LB[Ingress (ILB / Gateway Pattern)]
+  LB --> Apigee[Apigee X Runtime]
+  Apigee -->|mTLS / Private| PSC[Private Service Connect]
+  PSC --> Backends[(GCP Services / Private Backends)]
+  Apigee --> Logs[Cloud Logging]
+  Apigee --> Mon[Cloud Monitoring]

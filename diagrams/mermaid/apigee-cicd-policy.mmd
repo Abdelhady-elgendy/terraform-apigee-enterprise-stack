@@ -1,0 +1,9 @@
+flowchart LR
+  Dev[Developer] --> PR[Pull Request]
+  PR --> CI[CI: fmt/validate/security]
+  CI -->|pass| Plan[Terraform Plan]
+  Plan --> Review[Approval Gate]
+  Review --> Apply[Terraform Apply]
+  Apply --> Drift[Scheduled Drift Detection]
+  CI --> Policy[OPA/Conftest Policy Set]
+  Policy --> CI

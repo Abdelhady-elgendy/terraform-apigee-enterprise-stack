@@ -1,0 +1,10 @@
+flowchart LR
+  User((Client)) --> DNS[Global DNS / Traffic Policy]
+  DNS --> R1[Region A Ingress]
+  DNS --> R2[Region B Ingress]
+  R1 --> A[Apigee X Instance A]
+  R2 --> B[Apigee X Instance B]
+  A --> Backends[(Private Backends)]
+  B --> Backends
+  A --> Obs[Central Observability]
+  B --> Obs

@@ -1,0 +1,37 @@
+project_id       = "YOUR_PROJECT_ID"
+primary_region   = "us-central1"
+secondary_region = "us-east1"
+analytics_region = "us-central1"
+
+network_name          = "apigee-vpc"
+peering_prefix_length = 16
+
+kms_location      = "global"
+kms_key_ring_name = "apigee-kms"
+kms_crypto_keys = {
+  "apigee-org-db" = {
+    rotation_period = "2592000s"
+  }
+  "apigee-instance-disk" = {
+    rotation_period = "2592000s"
+  }
+}
+
+kms_org_key_name      = "apigee-org-db"
+kms_instance_key_name = "apigee-instance-disk"
+
+org_display_name            = "apigee-org"
+primary_instance_name       = "apigee-runtime-primary"
+secondary_instance_name     = "apigee-runtime-secondary"
+instance_peering_cidr_range = "SLASH_22"
+
+environment_name   = "prod"
+envgroup_name      = "prod-eg"
+envgroup_hostnames = ["api.example.com"]
+
+service_accounts = {
+  "apigee-platform" = {
+    display_name = "Apigee Platform Provisioner"
+    roles        = ["roles/apigee.admin"]
+  }
+}

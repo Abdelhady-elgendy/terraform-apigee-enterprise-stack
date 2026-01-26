@@ -1,0 +1,22 @@
+site_name: Terraform Apigee Enterprise Stack
+site_description: Production-grade Terraform Stacks + Modules for Apigee X on GCP.
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Home: index.md
+  - Overview: 01-overview.md
+  - Architecture: 02-architecture.md
+  - Quickstart: 03-quickstart.md
+  - Stacks vs Modules: 04-stacks-vs-modules.md
+  - Security: 05-security.md
+  - Production Checklist: 06-production-checklist.md
+  - Troubleshooting: 07-troubleshooting.md
+  - Runbooks: 08-runbooks.md
+  - Cost and Sizing: 09-cost.md
+  - Multi-Environment Strategy: 10-multi-env.md
+  - Security Posture: 11-security-posture.md
+  - CI/CD Templates: 12-ci-cd.md
+
+theme:
+  name: readthedocs
