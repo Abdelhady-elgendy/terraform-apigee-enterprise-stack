@@ -40,39 +40,39 @@ Mermaid renders (colorful by default):
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#D9F0FF","primaryTextColor":"#0F172A","secondaryColor":"#FFE1D6","tertiaryColor":"#E6FFFA","lineColor":"#334155","fontFamily":"Inter, ui-sans-serif, system-ui"}}}%%
 flowchart LR
-  User((Client)) -->|HTTPS| Edge[Public DNS / Cert]
-  Edge -->|Private / Controlled| LB[Ingress (ILB / Gateway Pattern)]
-  LB --> Apigee[Apigee X Runtime]
-  Apigee -->|mTLS / Private| PSC[Private Service Connect]
-  PSC --> Backends[(GCP Services / Private Backends)]
-  Apigee --> Logs[Cloud Logging]
-  Apigee --> Mon[Cloud Monitoring]
+  User((Client)) -->|HTTPS| Edge["Public DNS and TLS certs"]
+  Edge -->|Private access| LB["Ingress ILB or Gateway"]
+  LB --> Apigee["Apigee X Runtime"]
+  Apigee -->|mTLS private| PSC["Private Service Connect"]
+  PSC --> Backends["GCP services or private backends"]
+  Apigee --> Logs["Cloud Logging"]
+  Apigee --> Mon["Cloud Monitoring"]
 ```
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#E0F2FE","primaryTextColor":"#0F172A","secondaryColor":"#FCE7F3","tertiaryColor":"#ECFCCB","lineColor":"#334155","fontFamily":"Inter, ui-sans-serif, system-ui"}}}%%
 flowchart LR
-  User((Client)) --> DNS[Global DNS / Traffic Policy]
-  DNS --> R1[Region A Ingress]
-  DNS --> R2[Region B Ingress]
-  R1 --> A[Apigee X Instance A]
-  R2 --> B[Apigee X Instance B]
-  A --> Backends[(Private Backends)]
+  User((Client)) --> DNS["Global DNS and traffic policy"]
+  DNS --> R1["Region A ingress"]
+  DNS --> R2["Region B ingress"]
+  R1 --> A["Apigee X Instance A"]
+  R2 --> B["Apigee X Instance B"]
+  A --> Backends["Private backends"]
   B --> Backends
-  A --> Obs[Central Observability]
+  A --> Obs["Central observability"]
   B --> Obs
 ```
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#DCFCE7","primaryTextColor":"#0F172A","secondaryColor":"#FEF3C7","tertiaryColor":"#EDE9FE","lineColor":"#334155","fontFamily":"Inter, ui-sans-serif, system-ui"}}}%%
 flowchart LR
-  Dev[Developer] --> PR[Pull Request]
-  PR --> CI[CI: fmt/validate/security]
-  CI -->|pass| Plan[Terraform Plan]
-  Plan --> Review[Approval Gate]
-  Review --> Apply[Terraform Apply]
-  Apply --> Drift[Scheduled Drift Detection]
-  CI --> Policy[OPA/Conftest Policy Set]
+  Dev["Developer"] --> PR["Pull request"]
+  PR --> CI["CI: fmt, validate, security"]
+  CI -->|pass| Plan["Terraform plan"]
+  Plan --> Review["Approval gate"]
+  Review --> Apply["Terraform apply"]
+  Apply --> Drift["Scheduled drift detection"]
+  CI --> Policy["OPA or Conftest policy set"]
   Policy --> CI
 ```
 

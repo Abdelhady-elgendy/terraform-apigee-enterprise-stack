@@ -1,8 +1,9 @@
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#D9F0FF","primaryTextColor":"#0F172A","secondaryColor":"#FFE1D6","tertiaryColor":"#E6FFFA","lineColor":"#334155","fontFamily":"Inter, ui-sans-serif, system-ui"}}}%%
 flowchart LR
-  User((Client)) -->|HTTPS| Edge[Public DNS / Cert]
-  Edge -->|Private / Controlled| LB[Ingress (ILB / Gateway Pattern)]
-  LB --> Apigee[Apigee X Runtime]
-  Apigee -->|mTLS / Private| PSC[Private Service Connect]
-  PSC --> Backends[(GCP Services / Private Backends)]
-  Apigee --> Logs[Cloud Logging]
-  Apigee --> Mon[Cloud Monitoring]
+  User((Client)) -->|HTTPS| Edge["Public DNS and TLS certs"]
+  Edge -->|Private access| LB["Ingress ILB or Gateway"]
+  LB --> Apigee["Apigee X Runtime"]
+  Apigee -->|mTLS private| PSC["Private Service Connect"]
+  PSC --> Backends["GCP services or private backends"]
+  Apigee --> Logs["Cloud Logging"]
+  Apigee --> Mon["Cloud Monitoring"]

@@ -1,9 +1,10 @@
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#DCFCE7","primaryTextColor":"#0F172A","secondaryColor":"#FEF3C7","tertiaryColor":"#EDE9FE","lineColor":"#334155","fontFamily":"Inter, ui-sans-serif, system-ui"}}}%%
 flowchart LR
-  Dev[Developer] --> PR[Pull Request]
-  PR --> CI[CI: fmt/validate/security]
-  CI -->|pass| Plan[Terraform Plan]
-  Plan --> Review[Approval Gate]
-  Review --> Apply[Terraform Apply]
-  Apply --> Drift[Scheduled Drift Detection]
-  CI --> Policy[OPA/Conftest Policy Set]
+  Dev["Developer"] --> PR["Pull request"]
+  PR --> CI["CI: fmt, validate, security"]
+  CI -->|pass| Plan["Terraform plan"]
+  Plan --> Review["Approval gate"]
+  Review --> Apply["Terraform apply"]
+  Apply --> Drift["Scheduled drift detection"]
+  CI --> Policy["OPA or Conftest policy set"]
   Policy --> CI
