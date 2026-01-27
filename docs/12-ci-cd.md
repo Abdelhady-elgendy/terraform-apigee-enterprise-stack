@@ -6,6 +6,8 @@ This repo includes copy-paste templates for enterprise pipelines.
 
 Template:
 - `ci-templates/github-actions.yml`
+Deploy workflow (manual):
+- `.github/workflows/deploy.yml`
 
 Stages:
 - fmt

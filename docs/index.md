@@ -32,6 +32,7 @@ Day-2 guides:
 - [Multi-Environment Strategy](10-multi-env.md)
 - [Security Posture](11-security-posture.md)
 - [CI/CD Templates](12-ci-cd.md)
+- [Implementation Guide](13-implementation.md)
 
 ## Reference architectures
 
@@ -41,7 +42,6 @@ Day-2 guides:
 ## Diagrams
 
 - Mermaid sources: [`/diagrams/mermaid`](../diagrams/mermaid)
-- PNG exports: [`/diagrams/png`](../diagrams/png)
 
 ## What gets deployed (core)
 

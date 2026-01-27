@@ -17,6 +17,7 @@ nav:
   - Multi-Environment Strategy: 10-multi-env.md
   - Security Posture: 11-security-posture.md
   - CI/CD Templates: 12-ci-cd.md
+  - Implementation Guide: 13-implementation.md
 
 theme:
   name: readthedocs
